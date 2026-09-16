@@ -15,7 +15,7 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-content">
-          <img src={logo} alt="Hlengwe Holdings" className="hero-logo" />
+          {/* <img src={logo} alt="Hlengwe Holdings" className="hero-logo" /> */}
           <h1>Hlengwe Holdings (Pty) Ltd</h1>
           <p>
             A dynamic and global management consultancy committed to delivering exceptional outcomes and driving

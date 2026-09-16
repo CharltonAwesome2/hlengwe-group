@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <Link to="/" className="navbar-brand">
-        <img src={logo} alt="Hlengwe Holdings" />
+        {/* <img src={logo} alt="Hlengwe Holdings" /> */}
         <div className="navbar-brand-text">
           <span>HLENGWE</span>
           <span>Holdings</span>
