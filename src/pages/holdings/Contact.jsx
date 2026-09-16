@@ -13,10 +13,10 @@ export default function Contact() {
 
   return (
     <>
-      <div className="page-hero">
+      {/* <div className="page-hero">
         <h1>Contact Us</h1>
         <p>We are here to empower your organization for lasting success.</p>
-      </div>
+      </div> */}
 
       <Section title="Get in Touch">
         <div className="contact-grid">

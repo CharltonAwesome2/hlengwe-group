@@ -4,10 +4,10 @@ import PartnerGrid from '@components/holdings/PartnerGrid';
 export default function Partners() {
   return (
     <>
-      <div className="page-hero">
+      {/* <div className="page-hero">
         <h1>Our Partners</h1>
         <p>Collaborating with leading public and private institutions across South Africa.</p>
-      </div>
+      </div> */}
 
       <Section title="Strategic Partnerships">
         <PartnerGrid />

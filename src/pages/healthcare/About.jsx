@@ -1,18 +1,20 @@
 import Section from "@components/healthcare/Section";
 import CircleLayout from "@components/healthcare/CircleLayout";
+import SpecialistRing from "@components/healthcare/SpecialistRing";
 import OrgChart from "@components/healthcare/OrgChart";
 import { approachNodes } from "@data/healthcare/approach";
 import primitives from "@styles/primitives.module.css";
 import grids from "@styles/grids.module.css";
 import styles from "./Home.module.css";
+import sectionStyles from "@components/healthcare/Section.module.css";
 
 export default function About() {
   return (
     <>
-      <div className={primitives.pageHero}>
+      {/* <div className={primitives.pageHero}>
         <h1>About Us</h1>
         <p>Strengthening healthcare systems across Southern Africa and beyond.</p>
-      </div>
+      </div> */}
 
       <Section title="Who We Are" variant="white">
         <div style={{ maxWidth: 850, margin: "0 auto" }}>
@@ -30,7 +32,7 @@ export default function About() {
         </div>
       </Section>
 
-      <Section title="Our Approach" variant="cream-2">
+      {/* <Section title="Our Approach" variant="cream-2">
         <CircleLayout nodes={approachNodes} radius={40} centerLabel="Integrated Healthcare" />
         <div className={styles.centeredText}>
           <p>
@@ -38,9 +40,9 @@ export default function About() {
             international collaborators to deliver long-term, measurable healthcare impact.
           </p>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section title="Vision & Mission" variant="white">
+      <Section title="Vision & Mission" variant="cream">
         <div className={grids.servicesGrid}>
           <div className="service-category">
             <h3>Our Vision</h3>
@@ -60,8 +62,28 @@ export default function About() {
           </div>
         </div>
       </Section>
+      {/* <Section
+        title="Specialist Medical Training & Capacity Building"
+        subtitle="Twelve clinical disciplines at the core of our training pipelines."
+        variant="white"
+      >
+        <SpecialistRing />
+        <div className={styles.centeredText} style={{ marginTop: "2rem" }}>
+          <p>
+            We design and implement structured healthcare training programmes focused on specialist medical training
+            pipelines, train-the-trainer programmes, clinical mentorship, simulation-based training, cross-border
+            residency programmes, continuing professional development, nursing and allied healthcare training, and
+            competency-based healthcare education.
+          </p>
+        </div>
+      </Section> */}
 
-      <Section title="Our Structure" variant="cream-2">
+      <Section
+        title="Our Structure"
+        variant="white"
+        headerClassName={sectionStyles.structureHeader}
+        className={sectionStyles.sectionTightBottom}
+      >
         <OrgChart />
       </Section>
     </>

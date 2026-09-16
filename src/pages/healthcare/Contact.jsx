@@ -15,10 +15,10 @@ export default function Contact() {
 
   return (
     <>
-      <div className={primitives.pageHero}>
+      {/* <div className={primitives.pageHero}>
         <h1>Contact Us</h1>
         <p>Let's build sustainable, world-class healthcare systems together.</p>
-      </div>
+      </div> */}
 
       <Section title="Get in Touch" variant="white">
         <div className={styles.grid}>

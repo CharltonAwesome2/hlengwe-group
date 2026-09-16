@@ -5,13 +5,13 @@ import { subsidiaries } from '@data/holdings/subsidiaries';
 export default function Subsidiaries() {
   return (
     <>
-      <div className="page-hero">
+      {/* <div className="page-hero">
         <h1>Our Subsidiaries</h1>
         <p>
           Hlengwe Holdings operates through focused subsidiaries, each dedicated to
           delivering excellence in its sector.
         </p>
-      </div>
+      </div> */}
 
       <Section title="Group Companies">
         <div className="services-grid">

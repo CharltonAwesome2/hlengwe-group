@@ -14,10 +14,10 @@ export const galleryItems = [
 export default function Gallery() {
   return (
     <>
-      <div className="page-hero">
+      {/* <div className="page-hero">
         <h1>Our Gallery</h1>
         <p>Visualising transformative development across urban and rural landscapes.</p>
-      </div>
+      </div> */}
 
       <Section title="Projects & Developments">
         <div className="gallery-grid">

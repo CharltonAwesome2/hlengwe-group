@@ -7,8 +7,9 @@ export default function SpecialistRing() {
     <CircleLayout
       nodes={specialistAreas}
       radius={40}
+      mobileRadius={45}
       variant="specialist"
-      centerLabel="Key Focus Areas"     // <-- add this line
+      centerLabel="Key Focus Areas" 
       renderCenter={() => (
         <div className={styles.specialistCenter}>
           <strong>Key Focus Areas</strong>

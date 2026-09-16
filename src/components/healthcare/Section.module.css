@@ -39,7 +39,7 @@
 }
 
 .sectionHeader h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -52,4 +52,13 @@
   max-width: 650px;
   margin: 0 auto;
   font-size: 1rem;
+}
+
+.structureHeader {
+  padding-bottom: 0;
+  margin-bottom: 0rem;
+}
+
+.sectionTightBottom {
+  padding-bottom: 2rem;
 }

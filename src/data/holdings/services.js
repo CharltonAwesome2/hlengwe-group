@@ -33,3 +33,14 @@ export const values = [
   { title: 'Collaboration', desc: 'Fostering partnerships for mutual growth and success.' },
   { title: 'Empowerment', desc: 'Championing the inclusion of women and youth in leadership and business development.' },
 ];
+
+export const sectors = [
+  { name: 'Healthcare', icon: 'HeartPulse' },
+  { name: 'Education', icon: 'GraduationCap' },
+  { name: 'Government Administration', icon: 'Landmark' },
+  { name: 'Urban Development', icon: 'Building2' },
+  { name: 'Agriculture', icon: 'Sprout' },
+  { name: 'Mining & Energy', icon: 'Zap' },
+  { name: 'Financial Services', icon: 'Banknote' },
+  { name: 'Infrastructure', icon: 'TrafficCone' },
+];

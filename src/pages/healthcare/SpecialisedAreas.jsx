@@ -1,4 +1,4 @@
-import Section from '@components/healthcare/Section';
+import Section from "@components/healthcare/Section";
 import {
   specialisations,
   clinicalFocus,
@@ -6,7 +6,7 @@ import {
   regions,
   whyUs,
   commitment,
-} from '@data/healthcare/specialised';
+} from "@data/healthcare/specialised";
 import {
   Globe2,
   Users,
@@ -34,18 +34,38 @@ import {
   Lightbulb,
   MapPin,
   CheckCircle2,
-} from 'lucide-react';
-import primitives from '@styles/primitives.module.css';
-import styles from './SpecialisedAreas.module.css';
+} from "lucide-react";
+import primitives from "@styles/primitives.module.css";
+import styles from "./SpecialisedAreas.module.css";
 
 const ICONS = {
-  Globe2, Users, Stethoscope, Hospital, Leaf, GraduationCap,
-  MonitorSmartphone, ShieldCheck, Ribbon, Baby, Siren, Syringe,
-  Activity, HeartPulse, Brain, Eye, ShieldPlus, Wrench,
-  Anchor, Building2, Accessibility, BarChart3, Handshake, Lightbulb,
+  Globe2,
+  Users,
+  Stethoscope,
+  Hospital,
+  Leaf,
+  GraduationCap,
+  MonitorSmartphone,
+  ShieldCheck,
+  Ribbon,
+  Baby,
+  Siren,
+  Syringe,
+  Activity,
+  HeartPulse,
+  Brain,
+  Eye,
+  ShieldPlus,
+  Wrench,
+  Anchor,
+  Building2,
+  Accessibility,
+  BarChart3,
+  Handshake,
+  Lightbulb,
 };
 
-const Icon = ({ name, size = 22, color = 'var(--green)' }) => {
+const Icon = ({ name, size = 22, color = "var(--green)" }) => {
   const C = ICONS[name] || ShieldCheck;
   return <C size={size} color={color} />;
 };
@@ -53,16 +73,23 @@ const Icon = ({ name, size = 22, color = 'var(--green)' }) => {
 export default function SpecialisedAreas() {
   return (
     <>
-      <div className={primitives.pageHero}>
+      {/* <div className={primitives.pageHero}>
         <h1>Specialised Areas</h1>
         <p>Deep domain expertise across priority clinical disciplines, regional healthcare development, and long-term institutional partnerships.</p>
-      </div>
+      </div> */}
 
-      <Section title="Strategic Focus Areas" subtitle="Eight capability pillars defining where we go deep." variant="white">
+      <Section
+        title="Strategic Focus Areas"
+        subtitle="Eight capability pillars defining where we go deep."
+        variant="white"
+      >
+        <br />
         <div className={styles.focusGrid}>
           {specialisations.map((s, i) => (
             <div className={styles.focusCard} key={i}>
-              <div className={styles.focusIcon}><Icon name={s.icon} size={24} color="#fff" /></div>
+              <div className={styles.focusIcon}>
+                <Icon name={s.icon} size={24} color="#fff" />
+              </div>
               <h4>{s.title}</h4>
               <p>{s.desc}</p>
             </div>
@@ -70,13 +97,18 @@ export default function SpecialisedAreas() {
         </div>
       </Section>
 
-      <Section title="Clinical Focus Disciplines" subtitle="Twelve specialist areas at the core of our training and delivery pipelines." variant="cream-2">
+      <Section
+        title="Clinical Focus Disciplines"
+        subtitle="Twelve specialist areas at the core of our training and delivery pipelines."
+        variant="cream-2"
+      >
+        <br />
         <div className={styles.clinicalGrid}>
           {clinicalFocus.map((c, i) => (
             <div className={styles.clinicalCard} key={i}>
               <div className={styles.clinicalTop}>
                 <Icon name={c.icon} size={26} color="var(--green-dark)" />
-                <span className={styles.clinicalNum}>{String(i + 1).padStart(2, '0')}</span>
+                <span className={styles.clinicalNum}>{String(i + 1).padStart(2, "0")}</span>
               </div>
               <h4>{c.title}</h4>
               <p>{c.desc}</p>
@@ -85,7 +117,12 @@ export default function SpecialisedAreas() {
         </div>
       </Section>
 
-      <Section title="Our Healthcare Models Focus On" subtitle="The design principles that make our programmes durable." variant="white">
+      <Section
+        title="Our Healthcare Models Focus On"
+        subtitle="The design principles that make our programmes durable."
+        variant="white"
+      >
+        <br />
         <div className={styles.principlesRow}>
           {modelPrinciples.map((m, i) => (
             <div className={styles.principleCard} key={i}>
@@ -97,7 +134,12 @@ export default function SpecialisedAreas() {
         </div>
       </Section>
 
-      <Section title="Regional Healthcare Development" subtitle="Active initiatives across Southern Africa." variant="green">
+      <Section
+        title="Regional Healthcare Development"
+        subtitle="Active initiatives across Southern Africa."
+        variant="green"
+      >
+        <br />
         <div className={styles.regionGrid}>
           {regions.map((r, i) => (
             <div className={styles.regionCard} key={i}>
@@ -121,6 +163,7 @@ export default function SpecialisedAreas() {
       </Section>
 
       <Section title="Why Us" subtitle="Our implementation approach is built on eight commitments." variant="white">
+        <br />{" "}
         <div className={styles.whyGrid}>
           {whyUs.map((w, i) => (
             <div className={styles.whyCard} key={i}>

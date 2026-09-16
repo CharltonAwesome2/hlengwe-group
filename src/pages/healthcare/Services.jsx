@@ -6,14 +6,14 @@ import primitives from "@styles/primitives.module.css";
 export default function Services() {
   return (
     <>
-      <div className={primitives.pageHero}>
+      {/* <div className={primitives.pageHero}>
         <h1>Our Services</h1>
         <p>Seven integrated service pillars delivering sustainable healthcare impact.</p>
-      </div>
+      </div> */}
 
       <Section
         title="Our Core Services"
-        subtitle="Hover a slice or legend item to highlight a pillar. Click to open the full service detail."
+        subtitle="Seven integrated service pillars delivering sustainable healthcare impact."
         variant="white"
       >
         <ServicesPie />
@@ -22,7 +22,7 @@ export default function Services() {
       <Section
         title="Specialist Medical Training & Capacity Building"
         subtitle="Twelve clinical disciplines at the core of our training pipelines."
-        variant="white"
+        variant="cream-2"
       >
         <SpecialistRing />
       </Section>

@@ -20,24 +20,24 @@ export default function Home() {
         <div className={styles.heroContent}>
           <img src={logo} alt="Hlengwe Healthcare Solutions" className={styles.heroLogo} />
           <h1>
-            Strengthening <span>Healthcare Systems</span> Across Africa
+            Hlengwe Healthcare Solutions
           </h1>
           <p>
             A strategic healthcare development and consulting company focused on infrastructure, medical training,
             pharmaceuticals, and specialist healthcare delivery across Southern Africa.
           </p>
-          <div className={styles.heroButtons}>
+          {/* <div className={styles.heroButtons}>
             <Link to="/healthcare/services" className={`${primitives.btn} ${primitives.btnPrimary}`}>
               Our Services
             </Link>
             <Link to="/healthcare/contact" className={primitives.btn}>
               Get in Touch
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <Section title="Who We Are" variant="white">
+      {/* <Section title="Who We Are" variant="white">
         <div className={styles.textBlock}>
           <p>
             Hlengwe Healthcare Solutions, a subsidiary of Hlengwe Holdings Pty Ltd, is a strategic healthcare
@@ -51,12 +51,12 @@ export default function Home() {
             transformation initiatives.
           </p>
         </div>
-      </Section>
+      </Section> */}
 
       <Section
         title="Our Approach"
         subtitle="A holistic, partnership-driven methodology for long-term healthcare impact."
-        variant="cream-2"
+        variant="white"
       >
         <CircleLayout nodes={approachNodes} radius={40} centerLabel="Integrated Healthcare" />
         <div className={styles.centeredText}>
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Vision & Mission" variant="white">
+      {/* <Section title="Vision & Mission" variant="white">
         <div className={grids.servicesGrid}>
           <div style={{ background: "var(--white)", padding: "2.5rem 2rem", border: "1px solid rgba(106,168,79,0.2)" }}>
             <h3 style={{ color: "var(--green-dark)", marginBottom: "1rem" }}>Our Vision</h3>
@@ -86,7 +86,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* <Section
         title="Our Core Services"
@@ -100,7 +100,7 @@ export default function Home() {
           </Link>
         </div>
       </Section> */}
-
+{/* 
       <Section
         title="Specialist Medical Training & Capacity Building"
         subtitle="Twelve clinical disciplines at the core of our training pipelines."
@@ -115,8 +115,8 @@ export default function Home() {
             competency-based healthcare education.
           </p>
         </div>
-      </Section>
-
+      </Section> */}
+{/* 
       <Section
         title="Leadership"
         subtitle="A multi-disciplinary team of healthcare, finance, legal, and technology experts."
@@ -132,9 +132,9 @@ export default function Home() {
             Meet the Full Team
           </Link>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section variant="green">
+      {/* <Section variant="green">
         <div className={styles.ctaBlock}>
           <h2>Partner With Us</h2>
           <p>
@@ -145,7 +145,7 @@ export default function Home() {
             Contact Us Today
           </Link>
         </div>
-      </Section>
+      </Section> */}
     </>
   );
 }

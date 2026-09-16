@@ -1,8 +1,8 @@
 import styles from './OrgChart.module.css';
 
 export default function OrgChart() {
-  const boxW = 180;
-  const boxH = 60;
+  const boxW = 160;
+  const boxH = 65;
   const gapX = 40;
   const gapY = 30;
 
@@ -12,26 +12,26 @@ export default function OrgChart() {
   // Layout positions (x, y in px within SVG viewBox)
   const nodes = [
     // Column 1: Holdings → Chairman
-    { id: 'holdings', label: 'Hlengwe Holdings Pty Ltd', x: 20, y: 160, color: blue },
-    { id: 'chairman', label: 'Chairman\nHlomani P Chauke', x: 240, y: 160, color: blue },
+    // { id: 'holdings', label: 'Hlengwe Holdings Pty Ltd', x: 20, y: 160, color: blue },
+    { id: 'chairman', label: 'Chairman\nHlomani P Chauke', x: 160, y: 160, color: blue },
     // Column 2: Two CEOs
-    { id: 'ceoH', label: 'CEO\nJason Ngobeni', x: 460, y: 220, color: blue },
-    { id: 'ceoS', label: 'CEO\nLaura De Brito', x: 460, y: 100, color: green },
+    { id: 'ceoH', label: 'CEO\nJason Ngobeni', x: 380, y: 220, color: blue },
+    { id: 'ceoS', label: 'CEO\nLaura De Brito', x: 380, y: 100, color: green },
     // Column 3: Healthcare Solutions
-    { id: 'hhs', label: 'Hlengwe Healthcare Solutions', x: 680, y: 100, color: green },
+    { id: 'hhs', label: 'Hlengwe Healthcare Solutions', x: 600, y: 100, color: green },
     // Column 4: Directors reporting to Laura
-    { id: 'director1', label: 'Director\nDr Magome Masike', x: 900, y: 40, color: green },
-    { id: 'legal', label: 'Director Legal, Compliance\n& Regulatory Affairs\nPhumzi Phala', x: 900, y: 120, color: green },
-    { id: 'prog', label: 'Director Programme\nImplementation & Strategic\nDelivery\nRuby Ramatsui', x: 900, y: 200, color: green },
-    { id: 'med', label: 'Medical Associates', x: 900, y: 280, color: green },
+    { id: 'director1', label: 'Director\nDr Magome Masike', x: 820, y: 40, color: green },
+    { id: 'legal', label: 'Director Legal, Compliance\n& Regulatory Affairs\nPhumzi Phala', x: 820, y: 120, color: green },
+    { id: 'prog', label: 'Director Programme\nImplementation & Strategic\nDelivery\nRuby Ramatsui', x: 820, y: 200, color: green },
+    { id: 'med', label: 'Medical Associates', x: 820, y: 280, color: green },
     // Jason's directors
-    { id: 'cfo', label: 'CFO\nBongani Mahlori', x: 680, y: 250, color: blue },
-    { id: 'corp', label: 'Director Corporate Finance &\nInfrastructure Advisory\nVusumuzi Riba', x: 680, y: 330, color: blue },
-    { id: 'ba', label: 'Director Business Analysis\nSpecialist\nNtsako Maringa', x: 680, y: 490, color: blue },
+    { id: 'cfo', label: 'CFO\nBongani Mahlori', x: 600, y: 250, color: blue },
+    { id: 'corp', label: 'Director Corporate Finance &\nInfrastructure Advisory\nVusumuzi Riba', x: 600, y: 330, color: blue },
+    { id: 'ba', label: 'Director Business Analysis\nSpecialist\nNtsako Maringa', x: 600, y: 410, color: blue },
   ];
 
   const svgW = 1120;
-  const svgH = 580;
+  const svgH = 480;
 
   const getNode = (id) => nodes.find((n) => n.id === id);
 
@@ -88,7 +88,7 @@ export default function OrgChart() {
               dominantBaseline="middle"
               fill="#ffffff"
               fontSize="11"
-              fontWeight="600"
+              fontWeight="00"
               fontFamily="Inter, sans-serif"
             >
               {n.label.split('\n').map((line, i, arr) => (

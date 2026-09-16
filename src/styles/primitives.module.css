@@ -46,6 +46,8 @@
 
 .pageHero {
   padding: 10rem 2rem 4rem;
+  padding: 5rem 2rem 3rem;
+
   text-align: center;
   /* background: linear-gradient(rgba(245, 244, 232, 0.9), rgba(245, 244, 232, 0.98)),
     url('../assets/healthcare/hero.png') center / cover no-repeat; */
