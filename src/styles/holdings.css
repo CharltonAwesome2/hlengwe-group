@@ -1,0 +1,821 @@
+/* =========================================
+   HLENGWE HOLDINGS
+   ========================================= */
+
+.holdings-theme {
+  --gold: #d4af37;
+  --gold-light: #f4e4a6;
+  --gold-dark: #b8941f;
+  --black: #0a0a0a;
+  --dark: #1a1a1a;
+  --dark-2: #222;
+  --gray: #888;
+  --white: #ffffff;
+
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  min-height: 100vh;
+
+  font-family: var(--font-body);
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.holdings-theme h1,
+.holdings-theme h2,
+.holdings-theme h3,
+.holdings-theme h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.holdings-theme a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.holdings-theme ::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.holdings-theme .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.4s ease, padding 0.4s ease;
+  background: transparent;
+}
+
+.holdings-theme .navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 0.7rem 2rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.holdings-theme .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.holdings-theme .navbar-brand img {
+  height: 45px;
+  width: auto;
+}
+
+.holdings-theme .navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.holdings-theme .navbar-brand-text span:first-child {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+}
+
+.holdings-theme .navbar-brand-text span:last-child {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.holdings-theme .navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.holdings-theme .navbar-links a {
+  color: var(--white);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.holdings-theme .navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.holdings-theme .navbar-links a:hover::after,
+.holdings-theme .navbar-links a.active::after {
+  width: 100%;
+}
+
+.holdings-theme .navbar-links a.active {
+  color: var(--gold);
+}
+
+.holdings-theme .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gold);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.holdings-theme .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.9)),
+    url('../assets/holdings/hero-bg.jpg') center/cover no-repeat;
+  padding: 8rem 2rem 4rem;
+}
+
+.holdings-theme .hero-content {
+  max-width: 900px;
+  animation: holdingsFadeUp 1.2s ease forwards;
+}
+
+.holdings-theme .hero-logo {
+  height: 30vh;
+  margin: 0 auto 2rem;
+}
+
+.holdings-theme .hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.holdings-theme .hero h1 span {
+  color: var(--gold);
+}
+
+.holdings-theme .hero p {
+  font-size: 1.15rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.holdings-theme .hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.holdings-theme .btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.holdings-theme .btn-primary {
+  background: var(--gold);
+  color: var(--black);
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.holdings-theme .section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.holdings-theme .section-dark {
+  background: var(--dark);
+  max-width: 100%;
+}
+
+.holdings-theme .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.holdings-theme .section-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.holdings-theme .section-header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+}
+
+.holdings-theme .section-header p {
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   PAGE HERO
+   ========================================= */
+
+.holdings-theme .page-hero {
+  padding: 10rem 2rem 4rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)),
+    url('../assets/holdings/hero-bg.jpg') center/cover no-repeat;
+}
+
+.holdings-theme .page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.holdings-theme .page-hero p {
+  color: var(--gray);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   SERVICE CARDS
+   ========================================= */
+
+.holdings-theme .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.holdings-theme .service-category {
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 2.5rem 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.holdings-theme .service-category h3 {
+  color: var(--gold);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.holdings-theme .service-item {
+  margin-bottom: 1.5rem;
+}
+
+.holdings-theme .service-item h4 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.holdings-theme .service-item p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   VALUES
+   ========================================= */
+
+.holdings-theme .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.holdings-theme .value-card {
+  background: var(--dark-2);
+  padding: 2rem;
+  border-left: 3px solid var(--gold);
+  transition: background 0.3s ease;
+}
+
+.holdings-theme .value-card h4 {
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.holdings-theme .value-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   TEAM
+   ========================================= */
+
+.holdings-theme .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.holdings-theme .team-card {
+  background: var(--dark-2);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.holdings-theme .team-card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+.holdings-theme .team-card-body {
+  padding: 1.5rem;
+}
+
+.holdings-theme .team-card-body h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.holdings-theme .team-card-body .role {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.holdings-theme .team-card-body p {
+  color: #aaa;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PARTNERS
+   ========================================= */
+
+.holdings-theme .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.holdings-theme .partner-logo {
+  background: var(--white);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.holdings-theme .partner-logo img {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* =========================================
+   GALLERY
+   ========================================= */
+
+.holdings-theme .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.holdings-theme .gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.holdings-theme .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.holdings-theme .gallery-item-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   ORGANOGRAM
+   ========================================= */
+
+.holdings-theme .organogram-circle {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.holdings-theme .organogram-arrow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.holdings-theme .organogram-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
+  z-index: 2;
+  animation: holdingsPulseGold 3s ease-in-out infinite;
+}
+
+.holdings-theme .organogram-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: var(--dark-2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+  min-width: 140px;
+  transition: background 0.3s ease, color 0.3s ease;
+  z-index: 3;
+}
+
+@keyframes holdingsPulseGold {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.holdings-theme .org-level {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.holdings-theme .org-box {
+  background: var(--gold);
+  color: var(--black);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  min-width: 140px;
+  border-radius: 4px;
+}
+
+.holdings-theme .org-box.core {
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.holdings-theme .org-arrow {
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.holdings-theme .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.holdings-theme .contact-info h3 {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.holdings-theme .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.holdings-theme .contact-item svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.holdings-theme .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.holdings-theme .contact-form input,
+.holdings-theme .contact-form textarea {
+  background: var(--dark-2);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 1rem;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.holdings-theme .contact-form input:focus,
+.holdings-theme .contact-form textarea:focus {
+  border-color: var(--gold);
+}
+
+.holdings-theme .contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.holdings-theme .footer {
+  background: #050505;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 4rem 2rem 2rem;
+}
+
+.holdings-theme .footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.holdings-theme .footer h4 {
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.holdings-theme .footer p,
+.holdings-theme .footer li {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.holdings-theme .footer ul {
+  list-style: none;
+}
+
+.holdings-theme .footer ul a {
+  color: #888;
+}
+
+.holdings-theme .footer-bottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes holdingsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .holdings-theme .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .holdings-theme .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .holdings-theme .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.4s ease;
+    gap: 2.5rem;
+  }
+
+  .holdings-theme .navbar-links.open {
+    right: 0;
+  }
+
+  .holdings-theme .hamburger {
+    display: block;
+    z-index: 1001;
+  }
+
+  .holdings-theme .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .holdings-theme .hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .holdings-theme .organogram-circle {
+    max-width: 420px;
+  }
+
+  .holdings-theme .organogram-node {
+    font-size: 0.65rem;
+    padding: 0.5rem 0.7rem;
+    min-width: 100px;
+  }
+
+  .holdings-theme .organogram-center {
+    width: 90px;
+    height: 90px;
+    font-size: 0.65rem;
+  }
+}
+
+/* =========================================
+   SUBSIDIARIES
+   ========================================= */
+
+.holdings-theme .subsidiary-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.holdings-theme .subsidiary-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.holdings-theme .subsidiary-logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  /* filter: brightness(0) invert(1); */
+  /* opacity: 0.9; */
+}
+
+/* If it's dark, swap the above for: */
+/* .holdings-theme .subsidiary-logo {
+  height: 70px;
+  width: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  background: var(--white);
+  padding: 0.75rem;
+  border-radius: 4px;
+} */
+
+.holdings-theme .subsidiary-tagline {
+  color: var(--gold) !important;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.holdings-theme .subsidiary-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}

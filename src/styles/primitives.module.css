@@ -1,0 +1,64 @@
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--green);
+  background: transparent;
+  color: var(--green-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--green);
+  color: var(--white);
+  color: var(--white) !important;
+
+}
+
+.btnPrimary {
+  background: var(--green);
+  color: var(--white);
+  color: var(--white) !important;
+
+}
+
+.btnPrimary:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.btnGold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white) !important;
+}
+
+.btnGold:hover {
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+.pageHero {
+  padding: 10rem 2rem 4rem;
+  text-align: center;
+  /* background: linear-gradient(rgba(245, 244, 232, 0.9), rgba(245, 244, 232, 0.98)),
+    url('../assets/healthcare/hero.png') center / cover no-repeat; */
+}
+
+.pageHero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+.pageHero p {
+  color: var(--text-mid);
+  max-width: 650px;
+  margin: 0 auto;
+}

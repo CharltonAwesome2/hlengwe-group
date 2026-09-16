@@ -1,0 +1,55 @@
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionCream {
+  background: var(--cream-2);
+  max-width: 100%;
+}
+
+.sectionWhite {
+  background: var(--white);
+  max-width: 100%;
+}
+
+.sectionGreen {
+  background: var(--charcoal);
+  max-width: 100%;
+  color: var(--white);
+}
+
+.sectionGreen h2,
+.sectionGreen h3,
+.sectionGreen h4 {
+  color: var(--white);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--green);
+  margin: 1rem auto 0;
+}
+
+.sectionHeader p {
+  color: var(--text-mid);
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1rem;
+}

@@ -1,0 +1,98 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  /* background: linear-gradient(rgba(245, 244, 232, 0.75), rgba(245, 244, 232, 0.92)),
+    url('../assets/healthcare/hero.png') center / cover no-repeat; */
+  padding: 8rem 2rem 4rem;
+}
+
+
+.heroContent {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.heroLogo {
+  height: 30vh;
+  margin: 0 auto 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+.hero h1 span {
+  color: var(--green-dark);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-mid);
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.textBlock {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.textBlock p {
+  color: var(--text-mid);
+}
+
+.textBlock p + p {
+  margin-top: 1.5rem;
+}
+
+.ctaBlock {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaBlock h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.ctaBlock p {
+  color: #b8c8b8;
+  margin-bottom: 2rem;
+}
+
+.centeredBtn {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.centeredText {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.centeredText p {
+  color: var(--text-mid);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+}
