@@ -27,10 +27,10 @@ export default function Home() {
             pharmaceuticals, and specialist healthcare delivery across Southern Africa.
           </p>
           <div className={styles.heroButtons}>
-            <Link to="/services" className={`${primitives.btn} ${primitives.btnPrimary}`}>
+            <Link to="/healthcare/services" className={`${primitives.btn} ${primitives.btnPrimary}`}>
               Our Services
             </Link>
-            <Link to="/contact" className={primitives.btn}>
+            <Link to="/healthcare/contact" className={primitives.btn}>
               Get in Touch
             </Link>
           </div>
@@ -95,7 +95,7 @@ export default function Home() {
       >
         <ServicesPie />
         <div className={styles.centeredBtn}>
-          <Link to="/services" className={`${primitives.btn} ${primitives.btnPrimary}`}>
+          <Link to="/healthcare/services" className={`${primitives.btn} ${primitives.btnPrimary}`}>
             Explore All Services
           </Link>
         </div>
@@ -128,7 +128,7 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.centeredBtn}>
-          <Link to="/team" className={`${primitives.btn} ${primitives.btnPrimary}`}>
+          <Link to="/healthcare/team" className={`${primitives.btn} ${primitives.btnPrimary}`}>
             Meet the Full Team
           </Link>
         </div>
@@ -141,7 +141,7 @@ export default function Home() {
             Together, we can build sustainable, world-class healthcare systems that deliver measurable and lasting
             impact.
           </p>
-          <Link to="/contact" className={`${primitives.btn} ${primitives.btnGold}`}>
+          <Link to="/healthcare/contact" className={`${primitives.btn} ${primitives.btnGold}`}>
             Contact Us Today
           </Link>
         </div>

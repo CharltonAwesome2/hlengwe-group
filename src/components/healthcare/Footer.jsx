@@ -18,11 +18,11 @@ export default function Footer() {
         <div>
           <h4>Quick Links</h4>
           <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/specialised">Specialised Areas</Link></li>
-            <li><Link to="/team">Our Team</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/healthcare/about">About Us</Link></li>
+            <li><Link to="/healthcare/services">Services</Link></li>
+            <li><Link to="/healthcare/specialised">Specialised Areas</Link></li>
+            <li><Link to="/healthcare/team">Our Team</Link></li>
+            <li><Link to="/healthcare/contact">Contact</Link></li>
           </ul>
         </div>
         <div>
