@@ -165,12 +165,16 @@
 .btn-primary {
   background: var(--gold);
   color: var(--black);
-}
+  border-radius: 5rem;
+  /* border: 50px solid var(--gold-dark);
+  border: 50px solid blue; */
+  }
 
-/* .btn-primary:hover {
+.btn-primary:hover {
   background: var(--gold-light);
   border-color: var(--gold-light);
-} */
+  transform: translateY(-4px);
+}
 
 /* ===== SECTIONS ===== */
 .section {

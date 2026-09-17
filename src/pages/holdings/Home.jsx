@@ -31,6 +31,8 @@ export default function Home() {
             A dynamic and global management consultancy committed to delivering
             exceptional outcomes and driving sustainable change across Africa.
           </p> */}
+          <h3>Our subsidiaries:</h3>
+          <br/>
           <div className="hero-buttons">
             <Link to="/healthcare" className="btn btn-primary">
               Hlengwe Healthcare Solutions

@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
   plugins: [react()],
 
-  base: '/hlengwe-group/',
+   base: process.env.VITE_BASE ?? '/',
 
   resolve: {
     alias: {
