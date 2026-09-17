@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Build for GitHub Pages
-        run: npm run build -- --base=/hlengwe-group/
+        run: npm run build
         env:
             VITE_BASE: /hlengwe-group/
 
