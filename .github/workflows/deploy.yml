@@ -32,7 +32,7 @@ jobs:
       - name: Build for GitHub Pages
         run: npm run build
         env:
-            VITE_BASE: /hlengwe-group/
+          VITE_BASE: /hlengwe-group/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
