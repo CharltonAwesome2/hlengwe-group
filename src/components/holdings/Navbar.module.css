@@ -197,25 +197,43 @@
     z-index: 1001;
   }
 
+  /* Dropdown now floats as an absolutely-positioned panel */
+  .hasDropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbarDropdownToggle {
+    font-size: 0.85rem;
+  }
+
   .navbarDropdown {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    background: transparent;
-    border: none;
-    padding: 0;
-    display: none;
-    min-width: 0;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    min-width: 240px;
+    background: rgba(10, 10, 10, 0.98);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 1002;
+    display: block; /* override the "display: none" from the old rule */
   }
 
   .navbarDropdown.open {
-    display: block;
-    margin-top: 0.5rem;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
   }
 
   .navbarDropdown a {
-    padding: 0.5rem 0;
+    padding: 0.65rem 1.25rem;
     font-size: 0.8rem;
   }
 }
