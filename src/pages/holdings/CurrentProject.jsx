@@ -1,4 +1,6 @@
 import Section from "@components/holdings/Section";
+import grids from "@styles/grids.module.css";
+import cards from "@styles/holdings/cards.module.css";
 
 const stakeholders = [
   { name: "North West Provincial Government" },
@@ -36,9 +38,9 @@ export default function CurrentProject() {
       </Section>
 
       <Section title="Government Stakeholders">
-        <div className="values-grid">
+        <div className={grids.valuesGrid}>
           {stakeholders.map((s, i) => (
-            <div className="value-card" key={i}>
+            <div className={cards.valueCard} key={i}>
               <h4>{s.name}</h4>
             </div>
           ))}
@@ -46,9 +48,9 @@ export default function CurrentProject() {
       </Section>
 
       <Section title="Integrated Development Pillars" dark>
-        <div className="services-grid">
+        <div className={grids.servicesGrid}>
           {pillars.map((p, i) => (
-            <div className="service-category" key={i}>
+            <div className={cards.serviceCategory} key={i}>
               <h3>{p.title}</h3>
               <p style={{ color: "#bbb" }}>{p.desc}</p>
             </div>

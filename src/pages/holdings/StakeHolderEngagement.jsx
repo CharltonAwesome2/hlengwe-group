@@ -1,4 +1,6 @@
 import Section from "@components/holdings/Section";
+import grids from "@styles/grids.module.css";
+import cards from "@styles/holdings/cards.module.css";
 
 const stakeholders = [
   { name: "NECSA", full: "South African Nuclear Energy Corporation" },
@@ -22,9 +24,9 @@ export default function StakeholderEngagement() {
       </Section>
 
       <Section title="Strategic Partners">
-        <div className="values-grid">
+        <div className={grids.valuesGrid}>
           {stakeholders.map((s, i) => (
-            <div className="value-card" key={i}>
+            <div className={cards.valueCard} key={i}>
               <h4>{s.name}</h4>
               <p>{s.full}</p>
             </div>

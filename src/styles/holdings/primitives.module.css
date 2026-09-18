@@ -1,0 +1,151 @@
+/* =========================================
+   HOLDINGS PRIMITIVES
+   Buttons, hero, page-hero, sections
+   ========================================= */
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+  text-decoration: none;
+}
+
+.btn.btnPrimary {
+  background: var(--gold);
+  color: var(--black);
+  border-radius: 2rem;
+  border: 4px solid var(--gold-dark);
+}
+
+.btn.btnPrimary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-4px);
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.9)),
+    url("../../assets/holdings/hero-bg.jpg") center / cover no-repeat;
+  padding: 8rem 2rem 4rem;
+}
+
+.heroContent {
+  max-width: 900px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== PAGE HERO ===== */
+.pageHero {
+  padding: 10rem 2rem 4rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)),
+    url("../../assets/holdings/hero-bg.jpg") center / cover no-repeat;
+}
+
+.pageHero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.pageHero p {
+  color: var(--gray);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionDark {
+  background: var(--dark);
+  max-width: 100%;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+}
+
+.sectionHeader p {
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

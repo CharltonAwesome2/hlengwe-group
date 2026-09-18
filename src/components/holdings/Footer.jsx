@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin } from "lucide-react";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-grid">
+    <footer className={styles.footer}>
+      <div className={styles.footerGrid}>
         <div>
           <h4>Hlengwe Holdings</h4>
           <p>
@@ -12,7 +13,7 @@ export default function Footer() {
             contract management, urban mega city development, contract negotiations,
             and strategic services.
           </p>
-          <p style={{ marginTop: '1rem', color: '#d4af37', fontSize: '0.8rem' }}>
+          <p style={{ marginTop: "1rem", color: "#d4af37", fontSize: "0.8rem" }}>
             Company Registration: 2023/174511/07
           </p>
         </div>
@@ -30,22 +31,22 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <ul>
-            <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <li style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <Mail size={14} color="#d4af37" /> admin@hlengweholdings.com
             </li>
-            <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <li style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <Mail size={14} color="#d4af37" /> hlengweholdings@gmail.com
             </li>
-            <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <li style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <Phone size={14} color="#d4af37" /> +27 66 144 8132
             </li>
-            <li style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <li style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               <MapPin size={14} color="#d4af37" /> South Africa
             </li>
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className={styles.footerBottom}>
         &copy; {new Date().getFullYear()} Hlengwe Holdings Pty Ltd. All rights reserved.
       </div>
     </footer>

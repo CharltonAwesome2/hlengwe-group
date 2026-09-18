@@ -1,13 +1,15 @@
+import styles from "./Organogram.module.css";
+
 export default function Organogram() {
   const nodes = [
-    { label: 'Executive Chairman', angle: 270 }, // top
-    { label: 'CEO', angle: 342 },                // top-right
-    { label: 'CFO', angle: 54 },                 // bottom-right
-    { label: 'COO', angle: 126 },                // bottom-left
-    { label: 'GM', angle: 198 },                 // top-left
+    { label: "Executive Chairman", angle: 270 },
+    { label: "CEO", angle: 342 },
+    { label: "CFO", angle: 54 },
+    { label: "COO", angle: 126 },
+    { label: "GM", angle: 198 },
   ];
 
-  const radius = 38; // % of container
+  const radius = 38;
   const center = 50;
 
   const positions = nodes.map((n) => {
@@ -20,9 +22,8 @@ export default function Organogram() {
   });
 
   return (
-    <div className="organogram-circle">
-      {/* Circular clockwise arrow */}
-      <svg className="organogram-arrow" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <div className={styles.organogramCircle}>
+      <svg className={styles.organogramArrow} viewBox="0 0 100 100" preserveAspectRatio="none">
         <defs>
           <marker
             id="arrowhead"
@@ -35,7 +36,6 @@ export default function Organogram() {
             <polygon points="0 0, 6 3, 0 6" fill="#d4af37" />
           </marker>
         </defs>
-        {/* Circle path drawn clockwise starting from top (Exec Chairman) */}
         <circle
           cx="50"
           cy="50"
@@ -48,16 +48,14 @@ export default function Organogram() {
         />
       </svg>
 
-      {/* Center: Stakeholders */}
-      <div className="organogram-center">
+      <div className={styles.organogramCenter}>
         <span>Stakeholders</span>
       </div>
 
-      {/* Nodes around the circle */}
       {positions.map((n, i) => (
         <div
           key={i}
-          className="organogram-node"
+          className={styles.organogramNode}
           style={{
             left: `${n.x}%`,
             top: `${n.y}%`,

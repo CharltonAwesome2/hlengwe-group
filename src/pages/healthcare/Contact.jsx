@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Section from '@components/healthcare/Section';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import primitives from '@styles/primitives.module.css';
+import primitives from '@styles/healthcare/primitives.module.css';
 import styles from './Contact.module.css';
 
 export default function Contact() {
@@ -15,11 +15,6 @@ export default function Contact() {
 
   return (
     <>
-      {/* <div className={primitives.pageHero}>
-        <h1>Contact Us</h1>
-        <p>Let's build sustainable, world-class healthcare systems together.</p>
-      </div> */}
-
       <Section title="Get in Touch" variant="white">
         <div className={styles.grid}>
           <div className={styles.info}>

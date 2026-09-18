@@ -1,0 +1,221 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.4s ease, padding 0.4s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 0.7rem 2rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbarBrand img {
+  height: 45px;
+  width: auto;
+}
+
+.navbarBrandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarBrandText span:first-child {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+}
+
+.navbarBrandText span:last-child {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.navbarLinks a {
+  color: var(--white);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbarLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.navbarLinks a:hover::after,
+.navbarLinks a.active::after {
+  width: 100%;
+}
+
+.navbarLinks a.active {
+  color: var(--gold);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gold);
+}
+
+/* ===== DROPDOWN ===== */
+.hasDropdown {
+  position: relative;
+}
+
+.navbarDropdownToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0 4px;
+  position: relative;
+  font-family: inherit;
+}
+
+.navbarDropdownToggle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.navbarDropdownToggle:hover::after,
+.navbarDropdownToggle.active::after {
+  width: 100%;
+}
+
+.navbarDropdownToggle.active {
+  color: var(--gold);
+}
+
+.navbarDropdown {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 0;
+  min-width: 220px;
+  background: rgba(10, 10, 10, 0.98);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  list-style: none;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+}
+
+.navbarDropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbarDropdown a {
+  display: block;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbarDropdown a:hover,
+.navbarDropdown a.active {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.06);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .navbarLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.4s ease;
+    gap: 2.5rem;
+  }
+
+  .navbarLinks.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1001;
+  }
+
+  .navbarDropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: none;
+    min-width: 0;
+  }
+
+  .navbarDropdown.open {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .navbarDropdown a {
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+  }
+}

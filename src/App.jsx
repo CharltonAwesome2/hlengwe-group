@@ -22,7 +22,7 @@ import HealthcareTeam from "@pages/healthcare/Team.jsx";
 import HealthcareContact from "@pages/healthcare/Contact.jsx";
 
 import useDocumentMeta from "@hooks/useDocumentMeta.js";
-import "./App.css";
+// import "./App.css";
 
 function DocumentMeta() {
   useDocumentMeta();

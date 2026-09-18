@@ -3,19 +3,12 @@ import CircleLayout from "@components/healthcare/CircleLayout";
 import SpecialistRing from "@components/healthcare/SpecialistRing";
 import OrgChart from "@components/healthcare/OrgChart";
 import { approachNodes } from "@data/healthcare/approach";
-import primitives from "@styles/primitives.module.css";
 import grids from "@styles/grids.module.css";
-import styles from "./Home.module.css";
 import sectionStyles from "@components/healthcare/Section.module.css";
 
 export default function About() {
   return (
     <>
-      {/* <div className={primitives.pageHero}>
-        <h1>About Us</h1>
-        <p>Strengthening healthcare systems across Southern Africa and beyond.</p>
-      </div> */}
-
       <Section title="Who We Are" variant="white">
         <div style={{ maxWidth: 850, margin: "0 auto" }}>
           <p style={{ color: "var(--text-mid)", marginBottom: "1.5rem" }}>

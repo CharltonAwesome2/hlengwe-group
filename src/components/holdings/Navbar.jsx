@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import styles from "./Navbar.module.css";
 
 const links = [
   { path: "/", label: "Home" },
@@ -38,7 +39,6 @@ export default function Navbar() {
     setOpenDropdown(null);
   }, [location]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const onClick = (e) => {
       if (navRef.current && !navRef.current.contains(e.target)) {
@@ -55,40 +55,31 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`} ref={navRef}>
-      <Link to="/" className="navbar-brand">
-        <div className="navbar-brand-text">
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`} ref={navRef}>
+      <Link to="/" className={styles.navbarBrand}>
+        <div className={styles.navbarBrandText}>
           <span>HLENGWE</span>
           <span>Holdings</span>
         </div>
       </Link>
 
-      <ul className={`navbar-links ${open ? "open" : ""}`}>
+      <ul className={`${styles.navbarLinks} ${open ? styles.open : ""}`}>
         {links.map((l) => (
-          <li key={l.path || l.label} className={l.children ? "has-dropdown" : ""}>
+          <li key={l.path || l.label} className={l.children ? styles.hasDropdown : ""}>
             {l.children ? (
               <>
                 <button
-                  className={`navbar-dropdown-toggle ${isActive(l) ? "active" : ""}`}
-                  onClick={() =>
-                    setOpenDropdown(openDropdown === l.label ? null : l.label)
-                  }
+                  className={`${styles.navbarDropdownToggle} ${isActive(l) ? styles.active : ""}`}
+                  onClick={() => setOpenDropdown(openDropdown === l.label ? null : l.label)}
                   aria-expanded={openDropdown === l.label}
                 >
                   {l.label}
                   <ChevronDown size={14} />
                 </button>
-                <ul
-                  className={`navbar-dropdown ${
-                    openDropdown === l.label ? "open" : ""
-                  }`}
-                >
+                <ul className={`${styles.navbarDropdown} ${openDropdown === l.label ? styles.open : ""}`}>
                   {l.children.map((c) => (
                     <li key={c.path}>
-                      <Link
-                        to={c.path}
-                        className={location.pathname === c.path ? "active" : ""}
-                      >
+                      <Link to={c.path} className={location.pathname === c.path ? styles.active : ""}>
                         {c.label}
                       </Link>
                     </li>
@@ -96,10 +87,7 @@ export default function Navbar() {
                 </ul>
               </>
             ) : (
-              <Link
-                to={l.path}
-                className={location.pathname === l.path ? "active" : ""}
-              >
+              <Link to={l.path} className={location.pathname === l.path ? styles.active : ""}>
                 {l.label}
               </Link>
             )}
@@ -107,11 +95,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <button
-        className="hamburger"
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle menu"
-      >
+      <button className={styles.hamburger} onClick={() => setOpen(!open)} aria-label="Toggle menu">
         {open ? <X size={28} /> : <Menu size={28} />}
       </button>
     </nav>

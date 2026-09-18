@@ -1,15 +1,12 @@
 import Section from "@components/holdings/Section";
 import Organogram from "@components/holdings/Organogram";
 import { values } from "@data/holdings/services";
+import grids from "@styles/grids.module.css";
+import cards from "@styles/holdings/cards.module.css";
 
 export default function About() {
   return (
     <>
-      {/* <div className="page-hero">
-        <h1>About Us</h1>
-        <p>Driving growth, fostering innovation, and championing inclusivity.</p>
-      </div> */}
-
       <Section title="Who We Are" dark>
         <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <p style={{ color: "#ccc", marginBottom: "1.5rem" }}>
@@ -35,7 +32,7 @@ export default function About() {
             At Hlengwe Holdings Pty Ltd, our purpose goes beyond the ordinary. We are driven by a strong sense of
             mission that underlies our work, values, and approach.
           </p>
-          <div className="service-category" style={{ marginBottom: "1rem" }}>
+          <div className={cards.serviceCategory} style={{ marginBottom: "1rem" }}>
             <h3>Driving Growth</h3>
             <p style={{ color: "#bbb" }}>
               We are dedicated to helping organizations unlock their full potential and achieve sustainable growth. We
@@ -43,7 +40,7 @@ export default function About() {
               that drive long-term success.
             </p>
           </div>
-          <div className="service-category">
+          <div className={cards.serviceCategory}>
             <h3>Fostering Innovation</h3>
             <p style={{ color: "#bbb" }}>
               In today's rapidly changing business environment, innovation is key to staying competitive. We empower our
@@ -55,15 +52,15 @@ export default function About() {
       </Section>
 
       <Section title="Vision & Mission">
-        <div className="services-grid">
-          <div className="service-category">
+        <div className={grids.servicesGrid}>
+          <div className={cards.serviceCategory}>
             <h3>Vision</h3>
             <p style={{ color: "#bbb" }}>
               To be a leading consultancy and development firm, transforming businesses and urban landscapes through
               strategic partnerships and innovative solutions.
             </p>
           </div>
-          <div className="service-category">
+          <div className={cards.serviceCategory}>
             <h3>Mission</h3>
             <p style={{ color: "#bbb" }}>
               Our mission is to provide exceptional consultancy and management services that enable businesses and
@@ -74,9 +71,9 @@ export default function About() {
       </Section>
 
       <Section title="Core Values" dark>
-        <div className="values-grid">
+        <div className={grids.valuesGrid}>
           {values.map((v, i) => (
-            <div className="value-card" key={i}>
+            <div className={cards.valueCard} key={i}>
               <h4>{v.title}</h4>
               <p>{v.desc}</p>
             </div>
@@ -94,22 +91,22 @@ export default function About() {
             Information and Communication Technology (ICT) is one of Hlengwe Holdings' units. The ICT unit focuses on
             big data analytics, enterprise architecture, and artificial intelligence.
           </p>
-          <div className="services-grid">
-            <div className="service-category">
+          <div className={grids.servicesGrid}>
+            <div className={cards.serviceCategory}>
               <h3>Big Data Analytics</h3>
               <p style={{ color: "#bbb" }}>
                 We apply descriptive, diagnostic, predictive, and prescriptive analytics to extract valuable insights
                 from complex datasets from web, mobile, and social media sources.
               </p>
             </div>
-            <div className="service-category">
+            <div className={cards.serviceCategory}>
               <h3>Enterprise Architecture</h3>
               <p style={{ color: "#bbb" }}>
                 Our EA consists of information architecture, process-oriented architecture, application architecture,
                 and infrastructure architecture — applied holistically from strategic intent to operational process.
               </p>
             </div>
-            <div className="service-category">
+            <div className={cards.serviceCategory}>
               <h3>Artificial Intelligence</h3>
               <p style={{ color: "#bbb" }}>
                 We apply AI to advance organisational functions, automate processes, analyse data, recognise patterns,

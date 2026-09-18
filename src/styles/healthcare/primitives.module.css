@@ -21,25 +21,23 @@
 
 }
 
-.btnPrimary {
+.btn.btnPrimary {
   background: var(--green);
   color: var(--white);
-  color: var(--white) !important;
-
 }
 
-.btnPrimary:hover {
+.btn.btnPrimary:hover {
   background: var(--green-dark);
   border-color: var(--green-dark);
 }
 
-.btnGold {
+.btn.btnGold {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--white) !important;
+  color: var(--white);
 }
 
-.btnGold:hover {
+.btn.btnGold:hover {
   background: var(--gold-dark);
   border-color: var(--gold-dark);
 }

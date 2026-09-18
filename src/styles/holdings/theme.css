@@ -1,0 +1,44 @@
+/* =========================================
+   HLENGWE HOLDINGS
+   ========================================= */
+
+.holdings-theme {
+  --gold: #d4af37;
+  --gold-light: #f4e4a6;
+  --gold-dark: #b8941f;
+  --black: #0a0a0a;
+  --dark: #1a1a1a;
+  --dark-2: #222;
+  --gray: #888;
+  --white: #ffffff;
+
+  --font-heading: "Georgia", "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  min-height: 100vh;
+
+  font-family: var(--font-body);
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.holdings-theme h1,
+.holdings-theme h2,
+.holdings-theme h3,
+.holdings-theme h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.holdings-theme a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.holdings-theme ::selection {
+  background: var(--gold);
+  color: var(--black);
+}

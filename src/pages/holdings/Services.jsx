@@ -1,10 +1,12 @@
-import Section from '@components/holdings/Section';
-import ServiceCard from '@components/holdings/ServiceCard';
-import { services, sectors } from '@data/holdings/services';
+import Section from "@components/holdings/Section";
+import ServiceCard from "@components/holdings/ServiceCard";
+import { services, sectors } from "@data/holdings/services";
+import grids from "@styles/grids.module.css";
+import cards from "@styles/holdings/cards.module.css";
 import {
   HeartPulse, GraduationCap, Landmark, Building2,
   Sprout, Zap, Banknote, TrafficCone,
-} from 'lucide-react';
+} from "lucide-react";
 
 const sectorIcons = {
   HeartPulse, GraduationCap, Landmark, Building2,
@@ -14,13 +16,8 @@ const sectorIcons = {
 export default function Services() {
   return (
     <>
-      {/* <div className="page-hero">
-        <h1>Our Services</h1>
-        <p>Comprehensive strategic, technical, and business growth solutions.</p>
-      </div> */}
-
       <Section title="Service Offering">
-        <div className="services-grid">
+        <div className={grids.servicesGrid}>
           {services.map((s, i) => (
             <ServiceCard key={i} category={s.category} items={s.items} />
           ))}
@@ -28,12 +25,12 @@ export default function Services() {
       </Section>
 
       <Section title="Sectors We Serve" dark>
-        <div className="values-grid">
+        <div className={grids.valuesGrid}>
           {sectors.map((s, i) => {
             const Icon = sectorIcons[s.icon] || Building2;
             return (
-              <div className="value-card sector-card" key={i}>
-                <Icon size={28} color="var(--gold)" className="sector-icon" />
+              <div className={`${cards.valueCard} ${cards.sectorCard}`} key={i}>
+                <Icon size={28} color="var(--gold)" className={cards.sectorIcon} />
                 <h4>{s.name}</h4>
               </div>
             );

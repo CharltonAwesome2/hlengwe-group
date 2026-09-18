@@ -1,27 +1,27 @@
-import { Link } from 'react-router-dom';
-import Section from '@components/holdings/Section';
-import { subsidiaries } from '@data/holdings/subsidiaries';
+import { Link } from "react-router-dom";
+import Section from "@components/holdings/Section";
+import { subsidiaries } from "@data/holdings/subsidiaries";
+import grids from "@styles/grids.module.css";
+import cards from "@styles/holdings/cards.module.css";
 
 export default function Subsidiaries() {
   return (
     <>
-      {/* <div className="page-hero">
-        <h1>Our Subsidiaries</h1>
-        <p>
-          Hlengwe Holdings operates through focused subsidiaries, each dedicated to
-          delivering excellence in its sector.
-        </p>
-      </div> */}
-
       <Section title="Group Companies">
-        <div className="services-grid">
+        <div className={grids.servicesGrid}>
           {subsidiaries.map((s) => (
-            <Link key={s.name} to={s.to} className="service-category subsidiary-card">
-              {s.logo && <img src={s.logo} alt={s.name} className="subsidiary-logo" />}
+            <Link
+              key={s.name}
+              to={s.to}
+              className={`${cards.serviceCategory} ${cards.subsidiaryCard}`}
+            >
+              {s.logo && (
+                <img src={s.logo} alt={s.name} className={cards.subsidiaryLogo} />
+              )}
               <h3>{s.name}</h3>
-              {s.tagline && <p className="subsidiary-tagline">{s.tagline}</p>}
+              {s.tagline && <p className={cards.subsidiaryTagline}>{s.tagline}</p>}
               <p>{s.desc}</p>
-              <span className="subsidiary-cta">Visit page →</span>
+              <span className={cards.subsidiaryCta}>Visit page →</span>
             </Link>
           ))}
         </div>

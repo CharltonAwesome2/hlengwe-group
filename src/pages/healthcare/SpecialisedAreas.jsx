@@ -35,7 +35,6 @@ import {
   MapPin,
   CheckCircle2,
 } from "lucide-react";
-import primitives from "@styles/primitives.module.css";
 import styles from "./SpecialisedAreas.module.css";
 
 const ICONS = {
@@ -73,11 +72,6 @@ const Icon = ({ name, size = 22, color = "var(--green)" }) => {
 export default function SpecialisedAreas() {
   return (
     <>
-      {/* <div className={primitives.pageHero}>
-        <h1>Specialised Areas</h1>
-        <p>Deep domain expertise across priority clinical disciplines, regional healthcare development, and long-term institutional partnerships.</p>
-      </div> */}
-
       <Section
         title="Strategic Focus Areas"
         subtitle="Eight capability pillars defining where we go deep."
