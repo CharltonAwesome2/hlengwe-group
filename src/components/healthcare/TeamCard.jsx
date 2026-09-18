@@ -1,4 +1,5 @@
-import styles from './TeamCard.module.css';
+import styles from "./TeamCard.module.css";
+import Bio from "@components/shared/Bio";
 
 export default function TeamCard({ member }) {
   return (
@@ -7,7 +8,7 @@ export default function TeamCard({ member }) {
       <div className={styles.body}>
         <h3>{member.name}</h3>
         <span className={styles.role}>{member.role}</span>
-        <p>{member.bio}</p>
+        <Bio bio={member.bio} />
       </div>
     </div>
   );

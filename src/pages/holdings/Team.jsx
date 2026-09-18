@@ -1,6 +1,6 @@
-import Section from '@components/holdings/Section';
-import TeamCard from '@components/holdings/TeamCard';
-import { team } from '@data/holdings/team';
+import Section from "@components/holdings/Section";
+import TeamCard from "@components/holdings/TeamCard";
+import { team, chairman } from "@data/holdings/team";
 
 export default function Team() {
   return (
@@ -9,6 +9,14 @@ export default function Team() {
         <h1>Our Team</h1>
         <p>Seasoned leaders driving growth, innovation, and sustainable change.</p>
       </div> */}
+
+      <Section title="Executive Chairman">
+        <div className="team-grid">
+          {chairman.map((m, i) => (
+            <TeamCard key={i} member={m} />
+          ))}
+        </div>
+      </Section>
 
       <Section title="Leadership">
         <div className="team-grid">

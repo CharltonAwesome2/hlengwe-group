@@ -8,6 +8,8 @@ import HoldingsAbout from "@pages/holdings/About.jsx";
 import HoldingsServices from "@pages/holdings/Services.jsx";
 import HoldingsSubsidiaries from "@pages/holdings/Subsidiaries.jsx";
 import HoldingsTeam from "@pages/holdings/Team.jsx";
+import HoldingsStakeHolderEngagement from "@pages/holdings/StakeHolderEngagement.jsx";
+import HoldingsCurrentProject from "@pages/holdings/CurrentProject.jsx";
 import HoldingsPartners from "@pages/holdings/Partners.jsx";
 import HoldingsGallery from "@pages/holdings/Gallery.jsx";
 import HoldingsContact from "@pages/holdings/Contact.jsx";
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="services" element={<HoldingsServices />} />
           <Route path="subsidiaries" element={<HoldingsSubsidiaries />} />
           <Route path="team" element={<HoldingsTeam />} />
+          <Route path="stakeholder-engagement" element={<HoldingsStakeHolderEngagement />} />
+          <Route path="current-project" element={<HoldingsCurrentProject />} />
           <Route path="partners" element={<HoldingsPartners />} />
           <Route path="gallery" element={<HoldingsGallery />} />
           <Route path="contact" element={<HoldingsContact />} />

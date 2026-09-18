@@ -1,5 +1,5 @@
 // src/data/team.js
-import patrick from '@assets/healthcare/team/patrick.jpg';
+import patrick from '@assets/healthcare/team/patrick.png';
 import jason from '@assets/healthcare/team/jason.jpg';
 import laura from '@assets/healthcare/team/laura.jpg';
 import masike from '@assets/healthcare/team/masike.jpg';
@@ -10,12 +10,6 @@ import ruby from '@assets/healthcare/team/ruby.jpg';
 import ntsako from '@assets/healthcare/team/ntsako.jpg';
 
 export const team = [
-  {
-    name: 'Mr Hlomani Patrick Chauke',
-    role: 'Chairman',
-    image: patrick,
-    bio: 'Patrick Chauke brings over four decades of distinguished experience in politics, policy development, and business leadership. He served as Whip in the National Assembly in 1994 and chaired committees on Home Affairs and the Standing Committee on Public Accounts. He was MEC for Sports and Recreation in the North West Province and has held executive roles in mining and agriculture.',
-  },
   {
     name: 'Mr Jason Ngobeni',
     role: 'CEO',
@@ -63,5 +57,17 @@ export const team = [
     role: 'Director — Business Analysis Specialist',
     image: ntsako,
     bio: 'Ntsako Maringa is a skilled Business Analyst specializing in analyzing and evaluating business processes, systems, and strategies to drive efficiency. With expertise in data analysis, problem-solving, and stakeholder engagement, Ntsako bridges the gap between business operations and IT solutions, ensuring alignment with company goals.',
+  },
+];
+
+export const chairman = [
+  {
+    name: "Mr Patrick Chauke",
+    role: "Executive Chairman",
+    image: patrick,
+    bio: ["Patrick Chauke brings over four decades of distinguished experience spanning **public service, policy development, entrepreneurship and business leadership**. He began his parliamentary career in the National Assembly in 1994 and went on to serve in senior legislative and provincial leadership roles, including Chairperson of the Portfolio Committee on Home Affairs, Chairperson of the North West Standing Committee on Public Accounts, and MEC for Sports, Arts and Culture.",
+        "Beyond public service, Mr Chauke is an **experienced entrepreneur and business leader**, with interests and leadership experience across commercial ventures and strategic investment initiatives. Historical parliamentary disclosures also record his ownership interests in several businesses, supporting the entrepreneurial dimension of his professional background.",
+        "His combined experience in **government, governance, entrepreneurship, stakeholder engagement and strategic business development** enables him to bridge the public and private sectors and provide strategic leadership in the development of large-scale, sustainable projects and investment opportunities.",
+    ],
   },
 ];

@@ -1,3 +1,6 @@
+import { renderInline } from "@utils/renderInline";
+import Bio from "@components/shared/Bio";
+
 export default function TeamCard({ member }) {
   return (
     <div className="team-card">
@@ -5,7 +8,7 @@ export default function TeamCard({ member }) {
       <div className="team-card-body">
         <h3>{member.name}</h3>
         <span className="role">{member.role}</span>
-        <p>{member.bio}</p>
+        <Bio bio={member.bio} />
       </div>
     </div>
   );

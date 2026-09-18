@@ -43,3 +43,44 @@
   font-size: 0.85rem;
   line-height: 1.7;
 }
+
+.img {
+  width: 100%;
+  max-width: 320px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin: 0 auto;
+}
+
+.body {
+  padding: 1.5rem;
+}
+
+.body h3 {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.role {
+  color: var(--gold-dark);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: 600;
+}
+
+.body p {
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
